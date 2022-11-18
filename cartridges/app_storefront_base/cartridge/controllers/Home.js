@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @namespace Home
+ *  @namespace Home
  */
 
 var server = require('server');
@@ -16,7 +16,7 @@ var pageMetaData = require('*/cartridge/scripts/middleware/pageMetaData');
  * Home-Show : This endpoint is called when a shopper navigates to the home page
  * @name Base/Home-Show
  * @function
- * @memberof Home
+ * @memberof Home 
  * @param {middleware} - consentTracking.consent
  * @param {middleware} - cache.applyDefaultCache
  * @param {category} - non-sensitive
@@ -32,7 +32,7 @@ server.get('Show', consentTracking.consent, cache.applyDefaultCache, function (r
 
     var page = PageMgr.getPage('homepage');
 
-    if (page && page.isVisible()) {
+    if (page && page.isVisible()) {  
         res.page('homepage');
     } else {
         res.render('home/homePage');
